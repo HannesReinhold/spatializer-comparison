@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9184856987084050934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Saw/Resonance
+  m_EditorClassIdentifier: 
+  Path: event:/Saw/Resonance
+  Guid:
+    Data1: -772288849
+    Data2: 1114311928
+    Data3: 1522129835
+    Data4: -1684446620
+  Banks:
+  - {fileID: 3523428231643623754}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7418
 --- !u!114 &-8875069378045099810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,11 +42,38 @@ MonoBehaviour:
   Path: Assets/Spatial Comparator/Fmod/spatial_comparator_fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638182329992801351
+  lastModified: 638182341732793739
   FileSizes:
   - Name: Desktop
-    Value: 712
+    Value: 850
   Exists: 1
+--- !u!114 &-4972067681182270040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Saw/Oculus
+  m_EditorClassIdentifier: 
+  Path: event:/Saw/Oculus
+  Guid:
+    Data1: 1268885821
+    Data2: 1180749862
+    Data3: 1522286252
+    Data4: -1259764112
+  Banks:
+  - {fileID: 3523428231643623754}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7418
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35,14 +89,44 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: -8875069378045099810}
   - {fileID: 3523428231643623754}
-  EditorEvents: []
+  EditorEvents:
+  - {fileID: -4972067681182270040}
+  - {fileID: -9184856987084050934}
+  - {fileID: 3117096093673803153}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3523428231643623754}
   StringsBanks:
   - {fileID: -8875069378045099810}
-  cacheTime: 638182329992801351
+  cacheTime: 638182341732793739
   cacheVersion: 131603
+--- !u!114 &3117096093673803153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Saw/Default
+  m_EditorClassIdentifier: 
+  Path: event:/Saw/Default
+  Guid:
+    Data1: -1627060486
+    Data2: 1121050553
+    Data3: -926351430
+    Data4: 1526721680
+  Banks:
+  - {fileID: 3523428231643623754}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7418
 --- !u!114 &3523428231643623754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,8 +142,8 @@ MonoBehaviour:
   Path: Assets/Spatial Comparator/Fmod/spatial_comparator_fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638182329992771433
+  lastModified: 638182341732763810
   FileSizes:
   - Name: Desktop
-    Value: 1036
+    Value: 111744
   Exists: 1
