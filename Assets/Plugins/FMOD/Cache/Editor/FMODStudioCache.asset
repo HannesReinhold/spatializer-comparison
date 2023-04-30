@@ -19,7 +19,7 @@ MonoBehaviour:
     Data3: 1522129835
     Data4: -1684446620
   Banks:
-  - {fileID: 3523428231643623754}
+  - {fileID: 5490438104862922228}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -27,7 +27,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 7418
---- !u!114 &-8875069378045099810
+--- !u!114 &-5034940708869714218
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -36,17 +36,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Saw/Steam
   m_EditorClassIdentifier: 
-  Path: Assets/Spatial Comparator/Fmod/spatial_comparator_fmod/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638182341732793739
-  FileSizes:
-  - Name: Desktop
-    Value: 850
-  Exists: 1
+  Path: event:/Saw/Steam
+  Guid:
+    Data1: 647145974
+    Data2: 1183998245
+    Data3: 1084840093
+    Data4: -1882681113
+  Banks:
+  - {fileID: 5490438104862922228}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 7418
 --- !u!114 &-4972067681182270040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,7 +73,7 @@ MonoBehaviour:
     Data3: 1522286252
     Data4: -1259764112
   Banks:
-  - {fileID: 3523428231643623754}
+  - {fileID: 5490438104862922228}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -87,19 +94,40 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -8875069378045099810}
-  - {fileID: 3523428231643623754}
+  - {fileID: 1541161596699992718}
+  - {fileID: 5490438104862922228}
   EditorEvents:
   - {fileID: -4972067681182270040}
   - {fileID: -9184856987084050934}
   - {fileID: 3117096093673803153}
+  - {fileID: -5034940708869714218}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 3523428231643623754}
+  - {fileID: 5490438104862922228}
   StringsBanks:
-  - {fileID: -8875069378045099810}
-  cacheTime: 638182341732793739
+  - {fileID: 1541161596699992718}
+  cacheTime: 638184505447847385
   cacheVersion: 131603
+--- !u!114 &1541161596699992718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Fmod/spatial_comparator_fmod/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638184505447847385
+  FileSizes:
+  - Name: Desktop
+    Value: 886
+  Exists: 1
 --- !u!114 &3117096093673803153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,7 +147,7 @@ MonoBehaviour:
     Data3: -926351430
     Data4: 1526721680
   Banks:
-  - {fileID: 3523428231643623754}
+  - {fileID: 5490438104862922228}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -127,7 +155,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 7418
---- !u!114 &3523428231643623754
+--- !u!114 &5490438104862922228
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,11 +167,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: Assets/Spatial Comparator/Fmod/spatial_comparator_fmod/Build/Desktop/Master.bank
+  Path: Fmod/spatial_comparator_fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638182341732763810
+  lastModified: 638184505447827441
   FileSizes:
   - Name: Desktop
-    Value: 111744
+    Value: 113088
   Exists: 1
