@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1525990298387649756}
   - component: {fileID: 3903903801402022500}
+  - component: {fileID: 4917061004306041825}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -44,4 +45,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ca3fe4d2379cba47b32c5d654bc8c4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsVR: 0
   InitialGameState: 0
+  PlayerVRPrefab: {fileID: 4827986230997626910, guid: 7c7846cefb8c04747991c0be016bd3bd, type: 3}
+  PlayerNonVRPrefab: {fileID: 8597043352237636013, guid: b94e8ea4497dcfc4582603990962cea2, type: 3}
+  PlayerSpawn: {fileID: 0}
+  GuiManager: {fileID: 0}
+--- !u!114 &4917061004306041825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894261485780293197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
