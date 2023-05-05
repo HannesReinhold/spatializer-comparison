@@ -25,6 +25,7 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Start New Session");
         menuManager.SetMenu(MenuState.Introduction);
+        GameManager.Instance.StartNewSession();
     }
 
     public void OnNewSessionClicked()

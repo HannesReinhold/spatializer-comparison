@@ -17,6 +17,7 @@ public class MenuManager : MonoBehaviour
 
     public float GlobalVolume;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,11 +37,35 @@ public class MenuManager : MonoBehaviour
         
     }
 
+
+
+    public void ResetMenu()
+    {
+        IntroductionRef.Reset();
+        SettingsMenuRef.Reset();
+        DirectionGuessingRef.Reset();
+        SubjectiveEvaluationRef.Reset();
+    }
+
     public void SetMenu(MenuState state)
     {
         for(int i=0; i< MenuList.Count; i++)
         {
             MenuList[i].SetActive(i==(int)state);
+        }
+
+        switch (state)
+        {
+            case MenuState.MainMenu:
+                break;
+            case MenuState.Introduction:
+                break;
+            case MenuState.Settings:
+                break;
+            case MenuState.DirectionGuessing:
+                break;
+            case MenuState.SubjectiveEvaluation:
+                break;
         }
     }
 }

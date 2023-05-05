@@ -11,6 +11,8 @@ public class Introduction : MonoBehaviour
 
     private MenuManager menuManagerRef;
 
+    private bool alreadyDidIntroduction;
+
     private void OnEnable()
     {
         SetMenu(1);
@@ -27,6 +29,11 @@ public class Introduction : MonoBehaviour
     public void SetMenuManager(MenuManager man)
     {
         menuManagerRef = man;
+    }
+
+    public void Reset()
+    {
+        alreadyDidIntroduction = false;
     }
 
 
@@ -52,11 +59,13 @@ public class Introduction : MonoBehaviour
 
     public void OnFinishClick()
     {
+        alreadyDidIntroduction = true;
         menuManagerRef.SetMenu(MenuState.Closed);
+        menuManagerRef.SetMenu(MenuState.SubjectiveEvaluation);
     }
 
     public void SetVolume(float vol)
     {
-        Debug.Log(vol);
+        menuManagerRef.GlobalVolume = vol;
     }
 }
