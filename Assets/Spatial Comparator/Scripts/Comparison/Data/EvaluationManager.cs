@@ -19,15 +19,27 @@ public class EvaluationManager : MonoBehaviour
 
     public List<SubjectiveEvaluation> Evaluations;
 
+    public SpatializerSwitcher spatializerSwitcher;
+
     private void Awake()
     {
         Evaluations = new List<SubjectiveEvaluation> {
-            new SubjectiveEvaluation(1, SpatializerNames[0], "How Realistic does the Spatialzer sound like?", "Realism", "Very Artificial", "Very Realistic"),
-            new SubjectiveEvaluation(2, SpatializerNames[1], "How Realistic does the Spatialzer sound like?", "Realism", "Very Artificial", "Very Realistic"),
-            new SubjectiveEvaluation(3, SpatializerNames[2], "How Realistic does the Spatialzer sound like?", "Realism", "Very Artificial", "Very Realistic"),
-            new SubjectiveEvaluation(4, SpatializerNames[3], "How Realistic does the Spatialzer sound like?", "Realism", "Very Artificial", "Very Realistic"),
-            new SubjectiveEvaluation(5, SpatializerNames[0], "Description Test 5", "Test Aspect", "Min", "Max")
+            new SubjectiveEvaluation(1, SpatializerNames[0], 0, "How Realistic does the Spatialzer sound like?", "Realism", "Very Artificial", "Very Realistic"),
+            new SubjectiveEvaluation(2, SpatializerNames[1], 1, "How Realistic does the Spatialzer sound like?", "Realism", "Very Artificial", "Very Realistic"),
+            new SubjectiveEvaluation(3, SpatializerNames[2], 2, "How Realistic does the Spatialzer sound like?", "Realism", "Very Artificial", "Very Realistic"),
+            new SubjectiveEvaluation(4, SpatializerNames[3], 3, "How Realistic does the Spatialzer sound like?", "Realism", "Very Artificial", "Very Realistic"),
+            new SubjectiveEvaluation(5, SpatializerNames[0], 0, "Description Test 5", "Test Aspect", "Min", "Max")
         };
+    }
+
+    private void OnEnable()
+    {
+        SetEvaluationMenuState(0);
+    }
+
+    public void EnableAudioSource(bool enable)
+    {
+        spatializerSwitcher.gameObject.SetActive(enable);
     }
 
 
@@ -39,6 +51,19 @@ public class EvaluationManager : MonoBehaviour
             MenuPages[j].SetActive(i==j);
         }
 
+        switch (i)
+        {
+            case 0:
+                EnableAudioSource(false);
+                break;
+            case 1:
+                EnableAudioSource(true);
+                break;
+            default:
+                EnableAudioSource(false);
+                break;
+        }
+        spatializerSwitcher.SetSource(Evaluations[currentEvaluationIndex].spatializerID);
     }
 
     public void SetupEvaluation()
@@ -47,6 +72,8 @@ public class EvaluationManager : MonoBehaviour
         Dialog.SetHeader(evaluationData);
         EvaluationInterface.SetInterface(evaluationData);
         EvaluationInterface.SetEvaluationData(currentEvaluationIndex);
+
+        spatializerSwitcher.SetSource(Evaluations[currentEvaluationIndex].spatializerID);
     }
 
     public void SetNextEvaluation()

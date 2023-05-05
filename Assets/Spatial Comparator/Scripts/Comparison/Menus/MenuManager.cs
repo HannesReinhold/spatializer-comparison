@@ -23,9 +23,9 @@ public class MenuManager : MonoBehaviour
     {
         MainMenuRef.SetMenuManager(this);
         IntroductionRef.SetMenuManager(this);
-        SettingsMenuRef.SetMenuManager(this);
-        DirectionGuessingRef.SetMenuManager(this);
-        SubjectiveEvaluationRef.SetMenuManager(this);
+        //SettingsMenuRef.SetMenuManager(this);
+        //DirectionGuessingRef.SetMenuManager(this);
+        //SubjectiveEvaluationRef.SetMenuManager(this);
 
         SetMenu(MenuState.MainMenu);
 
@@ -42,9 +42,9 @@ public class MenuManager : MonoBehaviour
     public void ResetMenu()
     {
         IntroductionRef.Reset();
-        SettingsMenuRef.Reset();
-        DirectionGuessingRef.Reset();
-        SubjectiveEvaluationRef.Reset();
+        //SettingsMenuRef.Reset();
+        //DirectionGuessingRef.Reset();
+        //SubjectiveEvaluationRef.Reset();
     }
 
     public void SetMenu(MenuState state)

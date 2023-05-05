@@ -53,6 +53,7 @@ MonoBehaviour:
   - {fileID: 5313520463776496009}
   - {fileID: 5313520464155371212}
   directionGuessingManagaer: {fileID: 5313520464155371210}
+  followMenu: {fileID: 0}
 --- !u!1 &5313520463490488820
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,7 +371,10 @@ MonoBehaviour:
   countDown: {fileID: 5313520465170091163}
   Score: {fileID: 9061878389932974102}
   AudioSourcePosition: {fileID: 5313520464286497036}
+  SourceSwitcher: {fileID: 0}
   followMenu: {fileID: 5313520463711142307}
+  GuessedLine: {fileID: 0}
+  ActualLine: {fileID: 0}
 --- !u!1 &5313520464286497039
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,6 +686,7 @@ MonoBehaviour:
   - {fileID: 1437488216842773394}
   - {fileID: 7967537154499588136}
   VolumeSlider: {fileID: 534869624424444119}
+  VolumeAudioSource: {fileID: 0}
 --- !u!1 &5313520465111147866
 GameObject:
   m_ObjectHideFlags: 0
@@ -4678,6 +4683,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Direction Tutorial 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4888565699674921218, guid: 91a58814d9b6b23499fefa411309901e, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5175929636623619201, guid: 91a58814d9b6b23499fefa411309901e, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -4908,6 +4917,10 @@ PrefabInstance:
     - target: {fileID: 1854350592443939436, guid: 565dba3e68301d64bbe75d2a46ec28ee, type: 3}
       propertyPath: m_Name
       value: Direction Tutorial 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1968544880484213004, guid: 565dba3e68301d64bbe75d2a46ec28ee, type: 3}
+      propertyPath: m_Camera
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2257034782871039119, guid: 565dba3e68301d64bbe75d2a46ec28ee, type: 3}
       propertyPath: m_AnchorMax.y
@@ -6005,6 +6018,10 @@ PrefabInstance:
     - target: {fileID: 3782787118184211355, guid: a55a07ec98914b64ea1bb17fcdd14792, type: 3}
       propertyPath: m_Name
       value: DirectionScore
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933190577977309435, guid: a55a07ec98914b64ea1bb17fcdd14792, type: 3}
+      propertyPath: m_Camera
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4115908500069286726, guid: a55a07ec98914b64ea1bb17fcdd14792, type: 3}
       propertyPath: m_text
@@ -7960,6 +7977,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Direction Tutorial 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2230207889158830578, guid: aef15498ed3bb1b45b2f68b7b8b1f779, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3414126935526493775, guid: aef15498ed3bb1b45b2f68b7b8b1f779, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -9268,6 +9289,10 @@ PrefabInstance:
     - target: {fileID: 2312662935834180863, guid: 07e06786e876b694683c46452a6eea3f, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3000833035911477863, guid: 07e06786e876b694683c46452a6eea3f, type: 3}
+      propertyPath: m_Camera
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3120799470087414023, guid: 07e06786e876b694683c46452a6eea3f, type: 3}
       propertyPath: m_Name

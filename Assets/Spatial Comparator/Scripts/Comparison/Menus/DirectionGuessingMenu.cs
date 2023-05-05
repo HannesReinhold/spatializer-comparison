@@ -12,6 +12,14 @@ public class DirectionGuessingMenu : MonoBehaviour
 
     public DirectionGuessingManager directionGuessingManagaer;
 
+    public MenuFollower followMenu;
+
+
+    private void OnEnable()
+    {
+        SetMenuState(0);
+        followMenu.Follow();
+    }
 
     public void Reset()
     {
@@ -45,6 +53,9 @@ public class DirectionGuessingMenu : MonoBehaviour
 
     public void OnBackClicked()
     {
-        menuManagerRef.SetMenu(MenuState.Closed);
+        if (menuManagerRef != null)
+            menuManagerRef.SetMenu(MenuState.Closed);
+        else
+            GameManager.Instance.LoadScene("MainHub");
     }
 }

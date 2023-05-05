@@ -27,6 +27,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 7418
+--- !u!114 &-6490486956470941885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Metal/Resonance
+  m_EditorClassIdentifier: 
+  Path: event:/Metal/Resonance
+  Guid:
+    Data1: 1265259546
+    Data2: 1228193428
+    Data3: -1947362923
+    Data4: 1963953727
+  Banks:
+  - {fileID: 5490438104862922228}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 582556
 --- !u!114 &-5034940708869714218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,6 +108,168 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 7418
+--- !u!114 &-4081332514011278100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Talking/Resonance
+  m_EditorClassIdentifier: 
+  Path: event:/Talking/Resonance
+  Guid:
+    Data1: 773339065
+    Data2: 1224893728
+    Data3: -1234776420
+    Data4: -176758482
+  Banks:
+  - {fileID: 5490438104862922228}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 54000
+--- !u!114 &-3991530127685372768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Metal/Oculus
+  m_EditorClassIdentifier: 
+  Path: event:/Metal/Oculus
+  Guid:
+    Data1: -1332087724
+    Data2: 1160170436
+    Data3: 1038274182
+    Data4: -1168684801
+  Banks:
+  - {fileID: 5490438104862922228}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 582556
+--- !u!114 &-3724547526776162837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Talking/Steam
+  m_EditorClassIdentifier: 
+  Path: event:/Talking/Steam
+  Guid:
+    Data1: 2056769893
+    Data2: 1207217040
+    Data3: -1343202175
+    Data4: -1798707450
+  Banks:
+  - {fileID: 5490438104862922228}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 54000
+--- !u!114 &-1830396906322025470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Metal/Default
+  m_EditorClassIdentifier: 
+  Path: event:/Metal/Default
+  Guid:
+    Data1: 1628171050
+    Data2: 1328433263
+    Data3: -1131585627
+    Data4: -1735501623
+  Banks:
+  - {fileID: 5490438104862922228}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 582556
+--- !u!114 &-1268746213331364438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Talking/Default
+  m_EditorClassIdentifier: 
+  Path: event:/Talking/Default
+  Guid:
+    Data1: -2050329608
+    Data2: 1122746548
+    Data3: 153601432
+    Data4: 2111704168
+  Banks:
+  - {fileID: 5490438104862922228}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 54000
+--- !u!114 &-1231016733122907515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Metal/Steam
+  m_EditorClassIdentifier: 
+  Path: event:/Metal/Steam
+  Guid:
+    Data1: 391845928
+    Data2: 1202442413
+    Data3: 652430474
+    Data4: 446658377
+  Banks:
+  - {fileID: 5490438104862922228}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 582556
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,13 +290,49 @@ MonoBehaviour:
   - {fileID: -9184856987084050934}
   - {fileID: 3117096093673803153}
   - {fileID: -5034940708869714218}
+  - {fileID: 200747851044639785}
+  - {fileID: -6490486956470941885}
+  - {fileID: -1231016733122907515}
+  - {fileID: -1830396906322025470}
+  - {fileID: -3991530127685372768}
+  - {fileID: -3724547526776162837}
+  - {fileID: -4081332514011278100}
+  - {fileID: 2963843233192628177}
+  - {fileID: -1268746213331364438}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5490438104862922228}
   StringsBanks:
   - {fileID: 1541161596699992718}
-  cacheTime: 638185671995311748
+  cacheTime: 638188701878483150
   cacheVersion: 131603
+--- !u!114 &200747851044639785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VolumeAdjust
+  m_EditorClassIdentifier: 
+  Path: event:/VolumeAdjust
+  Guid:
+    Data1: 308707398
+    Data2: 1107851149
+    Data3: 532650650
+    Data4: 1712630654
+  Banks:
+  - {fileID: 5490438104862922228}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 14811
 --- !u!114 &1541161596699992718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,11 +348,38 @@ MonoBehaviour:
   Path: Fmod/spatial_comparator_fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638185671995311748
+  lastModified: 638188701878483150
   FileSizes:
   - Name: Desktop
-    Value: 886
+    Value: 1322
   Exists: 1
+--- !u!114 &2963843233192628177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Talking/Oculus
+  m_EditorClassIdentifier: 
+  Path: event:/Talking/Oculus
+  Guid:
+    Data1: -492901901
+    Data2: 1160966659
+    Data3: 723614379
+    Data4: -732668738
+  Banks:
+  - {fileID: 5490438104862922228}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 54000
 --- !u!114 &3117096093673803153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,8 +422,8 @@ MonoBehaviour:
   Path: Fmod/spatial_comparator_fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638185671995301768
+  lastModified: 638188701878453237
   FileSizes:
   - Name: Desktop
-    Value: 113088
+    Value: 10344800
   Exists: 1

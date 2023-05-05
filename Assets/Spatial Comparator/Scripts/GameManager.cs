@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
+using UnityEngine.XR;
 
 public class GameManager : MonoBehaviour
 {
     public bool IsVR;
+    public bool CanSpawnPlayer;
 
     public GameState InitialGameState = GameState.Explore;
 
@@ -19,6 +22,13 @@ public class GameManager : MonoBehaviour
 
 
     public DataManager dataManager;
+
+
+    private XRIDefaultInputActions actions;
+
+
+
+    public bool hasCompletedIntroduction;
 
 
 
@@ -47,23 +57,53 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
             dataManager = new DataManager();
+
+            GuiManager = FindObjectOfType<GUIManager>();
+
+
+
+
+            
         }
 
-        GuiManager = FindObjectOfType<GUIManager>();
-
-        
-
-
         InitializeGame();
+        StartNewSession();
     }
 
     private void Start()
     {
         GuiManager = FindObjectOfType<GUIManager>();
+
+        Canvas[] list = Resources.FindObjectsOfTypeAll<Canvas>();
+        foreach (Canvas c in list)
+        {
+            c.worldCamera = FindObjectOfType<Camera>();
+        }
+
+    }
+
+    private void OnEnable()
+    {
+        actions = new XRIDefaultInputActions();
+
+    }
+
+
+    void Guess(InputAction.CallbackContext context)
+    {
+        Application.Quit();
+    }
+
+    void ResetMenu(InputAction.CallbackContext context)
+    {
+
     }
 
     private void Update()
     {
+        float val = actions.XRIRightHandInteraction.Guess.ReadValue<float>();
+        if (val != 0) LoadScene("Freeroam");
+
 
     }
 
@@ -78,7 +118,7 @@ public class GameManager : MonoBehaviour
 
         // Spawn player
         PreparePlayerSpawn();
-        SpawnPlayer();
+        if(CanSpawnPlayer) SpawnPlayer();
     }
 
 

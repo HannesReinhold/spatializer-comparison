@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{7006d8db-a2a4-4848-8cf7-8ecbf97b4ef7}">
+		<property name="assetPath">
+			<value>Bury the Light - Vergil's battle theme from Devil May Cry 5 Special Edition.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>582.5567346938775</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{07e037fd-e352-4d48-88e1-2f2f9a014e4e}</destination>
+		</relationship>
+	</object>
+</objects>

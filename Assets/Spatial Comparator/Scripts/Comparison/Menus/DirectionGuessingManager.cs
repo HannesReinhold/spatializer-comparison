@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class DirectionGuessingManager : MonoBehaviour
 {
@@ -18,19 +19,41 @@ public class DirectionGuessingManager : MonoBehaviour
     private Transform cam;
 
     public Transform AudioSourcePosition;
+    public SpatializerSwitcher SourceSwitcher;
 
     public MenuFollower followMenu;
+
+    private XRIDefaultInputActions actions;
+
+    public LineRenderer GuessedLine;
+    public LineRenderer ActualLine;
+
+    private Vector3 guessedPosition;
+    private int currentSpatializer = 0;
 
     private void OnEnable()
     {
         countDown.gameObject.SetActive(false);
-        cam = FindObjectOfType<Camera>().transform; 
+        followMenu.Follow();
+
+    }
+
+
+    void Guess(InputAction.CallbackContext context)
+    {
+        SelectGuess();
+    }
+
+    void ResetMenu(InputAction.CallbackContext context)
+    {
+        followMenu.Follow();
     }
 
 
 
     public void StartGame()
     {
+        cam = FindObjectOfType<Camera>().transform;
         countDown.gameObject.SetActive(true);
         Score.SetActive(false);
         countDown.StartCountdown();
@@ -38,9 +61,11 @@ public class DirectionGuessingManager : MonoBehaviour
         data = new DirectionGuessingData(currentGameIndex);
         currentGameIndex++;
 
+        GuessedLine.SetPositions(new Vector3[] {});
+        ActualLine.SetPositions(new Vector3[] {});
 
         Invoke("PlayAudioSource", 3);
-        Invoke("SelectGuess", 6);
+        //Invoke("SelectGuess", 6);
     }
 
     public void SetMenuManager(MenuManager man)
@@ -57,12 +82,18 @@ public class DirectionGuessingManager : MonoBehaviour
 
     private void SpawnAtRandomPosition()
     {
-        AudioSourcePosition.position = cam.position + new Vector3(Random.Range(-5,5), Random.Range(-1,1), Random.Range(-5,5));
+        Vector3 dir = Random.insideUnitCircle.normalized;
+        dir = new Vector3(dir.x*5, dir.y*1, dir.z*5);
+        AudioSourcePosition.position = cam.position + dir;
+        AudioSourcePosition.gameObject.SetActive(true);
+        SourceSwitcher.SetSource(currentSpatializer);
+        currentSpatializer = (currentSpatializer + 1) % 4;
     }
 
     public void SelectGuess()
     {
-        Debug.Log("Guess");
+        data = new DirectionGuessingData(currentGameIndex);
+        currentGameIndex++;
         guessTime = Time.time;
         double dif = guessTime - startingTime;
 
@@ -70,6 +101,7 @@ public class DirectionGuessingManager : MonoBehaviour
         Vector3 direction = (AudioSourcePosition.position-cam.position).normalized;
         Vector3 guessedDirection = cam.forward;
 
+        data.spatializerID = currentSpatializer;
         data.timeToGuessDirection = dif;
         data.sourceDirection = direction;
         data.guessedDirection = guessedDirection;
@@ -78,6 +110,10 @@ public class DirectionGuessingManager : MonoBehaviour
         GameManager.Instance.dataManager.currentSessionData.directionGuessingResults.Add(data);
         GameManager.Instance.dataManager.SaveSession();
 
+        guessedPosition = cam.position;
+        GuessedLine.SetPositions(new Vector3[]{ guessedPosition, guessedPosition+cam.forward*2});
+        ActualLine.SetPositions(new Vector3[] { guessedPosition, AudioSourcePosition.position });
+
         Debug.Log("Azimuth: "+GetAzimuth());
         Debug.Log("Elevation: " + GetElevation());
 
@@ -85,6 +121,7 @@ public class DirectionGuessingManager : MonoBehaviour
         Score.SetActive(true);
 
         followMenu.Follow();
+        AudioSourcePosition.gameObject.SetActive(false);
     }
 
     private float GetAzimuth()
@@ -108,7 +145,10 @@ public class DirectionGuessingManager : MonoBehaviour
 
     public void OnBackClick()
     {
-        menuManagerRef.SetMenu(MenuState.Closed);
+        if (menuManagerRef != null)
+            menuManagerRef.SetMenu(MenuState.Closed);
+        else
+            GameManager.Instance.LoadScene("MainHub");
     }
 
     public void OnAgainClick()

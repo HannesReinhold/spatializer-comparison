@@ -22,6 +22,8 @@ public class MenuFollower : MonoBehaviour
 
     public void Follow()
     {
+        if(Player==null) Player = FindObjectOfType<Camera>().transform;
+
         float dist = MenuOffset.z;
 
 

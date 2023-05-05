@@ -13,9 +13,19 @@ public class Introduction : MonoBehaviour
 
     private bool alreadyDidIntroduction;
 
+    public GameObject VolumeAudioSource;
+
+    FMOD.Studio.Bus bus;
+
     private void OnEnable()
     {
         SetMenu(1);
+
+    }
+
+    private void Start()
+    {
+        bus = FMODUnity.RuntimeManager.GetBus("bus:/");
     }
 
     private void SetMenu(int index)
@@ -55,17 +65,21 @@ public class Introduction : MonoBehaviour
     public void OnVolumeSettingsClick()
     {
         SetMenu(4);
+        VolumeAudioSource.SetActive(false);
     }
 
     public void OnFinishClick()
     {
         alreadyDidIntroduction = true;
         menuManagerRef.SetMenu(MenuState.Closed);
-        menuManagerRef.SetMenu(MenuState.SubjectiveEvaluation);
+        GameManager.Instance.hasCompletedIntroduction = true;
     }
 
     public void SetVolume(float vol)
     {
         menuManagerRef.GlobalVolume = vol;
+        float volume = Mathf.Log10(Mathf.Max(vol+0.05f,0.01f)*20);
+        bus.setVolume(volume);
+        VolumeAudioSource.SetActive(true);
     }
 }

@@ -6,6 +6,7 @@ using UnityEngine;
 public class DirectionGuessingData
 {
     public int evaluationID;
+    public int spatializerID;
     public double timeToGuessDirection;
     public Vector3 sourceDirection;
     public Vector3 guessedDirection;

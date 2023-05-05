@@ -35,7 +35,10 @@ public class SubjectiveEvaluationMenu : MonoBehaviour
 
     public void OnBackClicked()
     {
-        menuManagerRef.SetMenu(MenuState.Closed);
+        if (menuManagerRef != null)
+            menuManagerRef.SetMenu(MenuState.Closed);
+        else
+            GameManager.Instance.LoadScene("MainHub");
     }
 
     public void OnTutorialClicked()
@@ -51,7 +54,10 @@ public class SubjectiveEvaluationMenu : MonoBehaviour
 
     public void OnExitClicked()
     {
-        menuManagerRef.SetMenu(MenuState.DirectionGuessing);
+        if (menuManagerRef != null)
+            menuManagerRef.SetMenu(MenuState.Closed);
+        else
+            GameManager.Instance.LoadScene("MainHub");
     }
 
     public void SetTutorialState()
