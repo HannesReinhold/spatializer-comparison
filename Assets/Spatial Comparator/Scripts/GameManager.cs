@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public GUIManager GuiManager;
 
 
+    public DataManager dataManager;
+
 
 
     private static GameManager instance;
@@ -44,6 +46,7 @@ public class GameManager : MonoBehaviour
         else
         {
             instance = this;
+            dataManager = new DataManager();
         }
 
         GuiManager = FindObjectOfType<GUIManager>();
@@ -62,6 +65,11 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
 
+    }
+
+    public void StartNewSession()
+    {
+        dataManager.InitializeSession();
     }
 
     private void InitializeGame()
