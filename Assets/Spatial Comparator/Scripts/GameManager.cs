@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
 
         // Spawn player
         PreparePlayerSpawn();
-        //SpawnPlayer();
+        SpawnPlayer();
     }
 
 
