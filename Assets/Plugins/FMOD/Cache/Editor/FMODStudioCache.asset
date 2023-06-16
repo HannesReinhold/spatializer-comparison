@@ -27,6 +27,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 7418
+--- !u!114 &-8871595600254355399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Drone
+  m_EditorClassIdentifier: 
+  Path: event:/Drone
+  Guid:
+    Data1: -1099137839
+    Data2: 1292793576
+    Data3: 377095853
+    Data4: 1742746397
+  Banks:
+  - {fileID: 5490438104862922228}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 33671
 --- !u!114 &-6490486956470941885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49,11 +76,11 @@ MonoBehaviour:
   - {fileID: 5490438104862922228}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 582556
+  Length: 312935
 --- !u!114 &-5034940708869714218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,7 +158,8 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
-  Parameters: []
+  Parameters:
+  - {fileID: 1089099704986026400}
   MinDistance: 1
   MaxDistance: 20
   Length: 54000
@@ -157,11 +185,11 @@ MonoBehaviour:
   - {fileID: 5490438104862922228}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 582556
+  Length: 312935
 --- !u!114 &-3724547526776162837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,11 +239,11 @@ MonoBehaviour:
   - {fileID: 5490438104862922228}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 582556
+  Length: 312935
 --- !u!114 &-1268746213331364438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,11 +293,38 @@ MonoBehaviour:
   - {fileID: 5490438104862922228}
   IsStream: 0
   Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 312935
+--- !u!114 &-271006869883607922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Wind
+  m_EditorClassIdentifier: 
+  Path: event:/Wind
+  Guid:
+    Data1: 1765770361
+    Data2: 1091067514
+    Data3: -1029700429
+    Data4: 1241287407
+  Banks:
+  - {fileID: 5490438104862922228}
+  IsStream: 0
+  Is3D: 1
   IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 582556
+  Length: 14811
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,12 +354,14 @@ MonoBehaviour:
   - {fileID: -4081332514011278100}
   - {fileID: 2963843233192628177}
   - {fileID: -1268746213331364438}
+  - {fileID: -8871595600254355399}
+  - {fileID: -271006869883607922}
   EditorParameters: []
   MasterBanks:
   - {fileID: 5490438104862922228}
   StringsBanks:
   - {fileID: 1541161596699992718}
-  cacheTime: 638188701878483150
+  cacheTime: 638217236459001715
   cacheVersion: 131603
 --- !u!114 &200747851044639785
 MonoBehaviour:
@@ -333,6 +390,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 14811
+--- !u!114 &1089099704986026400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Resonance/Occlusion
+  m_EditorClassIdentifier: 
+  Name: Occlusion
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 1424181629
+    data2: 2556084458
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &1541161596699992718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -348,10 +429,10 @@ MonoBehaviour:
   Path: Fmod/spatial_comparator_fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638188701878483150
+  lastModified: 638217236459001715
   FileSizes:
   - Name: Desktop
-    Value: 1322
+    Value: 1406
   Exists: 1
 --- !u!114 &2963843233192628177
 MonoBehaviour:
@@ -422,8 +503,8 @@ MonoBehaviour:
   Path: Fmod/spatial_comparator_fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638188701878453237
+  lastModified: 638217236458971795
   FileSizes:
   - Name: Desktop
-    Value: 10344800
+    Value: 9630560
   Exists: 1

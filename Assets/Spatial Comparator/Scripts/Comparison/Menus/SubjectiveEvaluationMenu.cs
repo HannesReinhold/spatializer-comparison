@@ -54,6 +54,8 @@ public class SubjectiveEvaluationMenu : MonoBehaviour
 
     public void OnExitClicked()
     {
+
+
         if (menuManagerRef != null)
             menuManagerRef.SetMenu(MenuState.Closed);
         else

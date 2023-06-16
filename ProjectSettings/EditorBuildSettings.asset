@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Spatial Comparator/Level/Scenes/DirectionGuessing.unity
     guid: a30fa3ee205c4ee44920621485ce5af7
-  - enabled: 0
+  - enabled: 1
     path: Assets/Spatial Comparator/Level/Scenes/GUITesting.unity
     guid: 91eee6f1eea52944da373243d1468c17
   - enabled: 1
@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Spatial Comparator/Level/Scenes/SubjectiveEvaluation.unity
     guid: 300833c502f9a9c459c7509f0a372c70
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: cbf4b48a0e600ce458029043e64535c9, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 1a888a9976dd2314e8e31b40ec67f583, type: 2}

@@ -18,6 +18,11 @@ public class SubjectiveEvaluationInterface1 : MonoBehaviour
 
     public Slider slider;
 
+    public TextMeshProUGUI toggleA, toggleB;
+    public TextMeshProUGUI sliderMin, sliderMax;
+
+
+
     public void Reset()
     {
 
@@ -30,18 +35,23 @@ public class SubjectiveEvaluationInterface1 : MonoBehaviour
 
     public void SetInterface(SubjectiveEvaluation evaluationInfo)
     {
-        Header.text = "Evaluation " + evaluationInfo.id + " / " + evaluationManager.Evaluations.Count;
+        Header.text = "Spatializer " + evaluationInfo.id + " / " + 5;
         Description.text = evaluationInfo.description;
 
         Min.text = evaluationInfo.minValue;
         Max.text = evaluationInfo.maxValue;
+
+        toggleA.text = "Unity";
+        toggleB.text = evaluationInfo.spatializerName;
+        sliderMin.text = "Unity";
+        sliderMax.text = evaluationInfo.spatializerName;
     }
 
     public void SetEvaluationData(int index)
     {
-        evaluationData = new SubjectiveEvaluationData(index);
-        evaluationData.spatializerName = evaluationManager.Evaluations[index].spatializerName;
-        evaluationData.evaluationAspect = evaluationManager.Evaluations[index].evaluationAspect;
+        //evaluationData = new SubjectiveEvaluationData(index,"","","");
+        //evaluationData.spatializerName = evaluationManager.Evaluations[index].spatializerName;
+        //evaluationData.evaluationAspect = evaluationManager.Evaluations[index].evaluationAspect;
         GameManager.Instance.dataManager.currentSessionData.subjectiveEvaluationResults.Add(evaluationData);
     }
 
@@ -52,18 +62,18 @@ public class SubjectiveEvaluationInterface1 : MonoBehaviour
 
     public void OnSliderChanged(float value)
     {
-        evaluationData.evaluationValue = value;
+        evaluationData.evaluationParts[0].singleEvaluations[0].value = value;
     }
 
     public void OnNextClicked()
     {
         SaveEvaluationData();
-        if (evaluationManager.currentEvaluationIndex >= evaluationManager.Evaluations.Count-1)
-        {
-            evaluationManager.SetEvaluationMenuState(2);
+        //if (evaluationManager.currentEvaluationIndex >= evaluationManager.Evaluations.Count-1)
+        //{
+        //    evaluationManager.SetEvaluationMenuState(2);
             
-            return;
-        }
+        //    return;
+        //}
         
         
         evaluationManager.SetEvaluationMenuState(0);

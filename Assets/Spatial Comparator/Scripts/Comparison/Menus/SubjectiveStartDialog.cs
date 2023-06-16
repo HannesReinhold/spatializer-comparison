@@ -10,9 +10,9 @@ public class SubjectiveStartDialog : MonoBehaviour
 
 
 
-    public void SetHeader(SubjectiveEvaluation evaluationInfo)
+    public void SetHeader(ConcreteSubjectiveEvaluation evaluationInfo)
     {
-        Header.text = "Evaluation "+evaluationInfo.id + " / "+5;
+        Header.text = "Evaluation "+evaluationInfo.evaluationID + " / "+5;
         Content.text = evaluationInfo.description;
     }
 }

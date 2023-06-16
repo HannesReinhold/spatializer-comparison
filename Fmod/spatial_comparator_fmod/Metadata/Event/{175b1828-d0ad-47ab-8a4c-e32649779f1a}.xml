@@ -60,7 +60,7 @@
 	<object class="MarkerTrack" id="{0249b3ff-2f8f-4e0c-b03b-9ee6d3cd375f}" />
 	<object class="GroupTrack" id="{5ad73d37-92b4-4068-abba-a9c8e2e8c253}">
 		<relationship name="modules">
-			<destination>{b83b68b6-1396-46df-9de9-cce2fa1be6a2}</destination>
+			<destination>{60fb8978-26ba-4007-b899-b4e9f0cfa2d0}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{a689d114-5601-40dd-ab53-abd93f73ddbe}</destination>
@@ -68,10 +68,7 @@
 	</object>
 	<object class="Timeline" id="{0aa1b4f3-bb40-4166-990f-cd5854550308}">
 		<relationship name="modules">
-			<destination>{b83b68b6-1396-46df-9de9-cce2fa1be6a2}</destination>
-		</relationship>
-		<relationship name="markers">
-			<destination>{3af9c42d-29c7-4a3c-a1d2-6c73b42d737a}</destination>
+			<destination>{60fb8978-26ba-4007-b899-b4e9f0cfa2d0}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{becb00a4-1ffc-4da0-9acc-3c019e1758c4}">
@@ -91,12 +88,15 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{5c55d797-bf3c-4c4b-9f2d-057814323829}" />
-	<object class="SingleSound" id="{b83b68b6-1396-46df-9de9-cce2fa1be6a2}">
+	<object class="SingleSound" id="{60fb8978-26ba-4007-b899-b4e9f0cfa2d0}">
 		<property name="length">
-			<value>582.5567346938775</value>
+			<value>312.9355102040825</value>
+		</property>
+		<property name="timelockedOffset">
+			<value>266.79999999999916</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{7006d8db-a2a4-4848-8cf7-8ecbf97b4ef7}</destination>
+			<destination>{63ba23f5-83e3-4a1f-ae4c-cc439a3a6ef3}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{a689d114-5601-40dd-ab53-abd93f73ddbe}">
@@ -111,20 +111,6 @@
 		</relationship>
 		<relationship name="output">
 			<destination>{becb00a4-1ffc-4da0-9acc-3c019e1758c4}</destination>
-		</relationship>
-	</object>
-	<object class="LoopRegion" id="{3af9c42d-29c7-4a3c-a1d2-6c73b42d737a}">
-		<property name="position">
-			<value>121</value>
-		</property>
-		<property name="length">
-			<value>70</value>
-		</property>
-		<relationship name="timeline">
-			<destination>{0aa1b4f3-bb40-4166-990f-cd5854550308}</destination>
-		</relationship>
-		<relationship name="markerTrack">
-			<destination>{0249b3ff-2f8f-4e0c-b03b-9ee6d3cd375f}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{efce4b10-309b-4417-92f5-4e3ac91d7e70}">
@@ -192,7 +178,6 @@
 		<property name="name">
 			<value>SourcePos</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-2</value>
 		</property>
@@ -201,7 +186,6 @@
 		<property name="name">
 			<value>OverallGain</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-1</value>
 		</property>
@@ -253,7 +237,7 @@
 			<value>ApplyOccl</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<property name="minimumValue">
 			<value>0</value>
@@ -281,7 +265,7 @@
 			<value>ApplyRefl</value>
 		</property>
 		<property name="value">
-			<value>false</value>
+			<value>true</value>
 		</property>
 	</object>
 	<object class="BoolPluginParameter" id="{bbe079fd-f94b-44ef-b24c-80cf8b7882c3}">
@@ -402,7 +386,7 @@
 			<value>DipoleWeight</value>
 		</property>
 		<property name="value">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,1.000000)}</value>
@@ -493,7 +477,7 @@
 			<value>ReflBinaural</value>
 		</property>
 		<property name="value">
-			<value>false</value>
+			<value>true</value>
 		</property>
 	</object>
 	<object class="FloatPluginParameter" id="{e372a233-6a64-4e81-876b-0afa7244a272}">
@@ -501,7 +485,7 @@
 			<value>ReflMixLevel</value>
 		</property>
 		<property name="value">
-			<value>1</value>
+			<value>1.80000007</value>
 		</property>
 		<property name="curve">
 			<value>{(0.000000,0.000000)(1.000000,10.000000)}</value>
@@ -530,7 +514,6 @@
 		<property name="name">
 			<value>SimOutputs</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>0</value>
 		</property>
@@ -547,7 +530,6 @@
 		<property name="name">
 			<value>DistRange</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-6</value>
 		</property>

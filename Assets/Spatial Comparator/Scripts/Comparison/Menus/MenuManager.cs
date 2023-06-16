@@ -37,6 +37,11 @@ public class MenuManager : MonoBehaviour
         
     }
 
+    public void LoadSubjective(string name)
+    {
+        GameManager.Instance.LoadScene(name);
+    }
+
 
 
     public void ResetMenu()

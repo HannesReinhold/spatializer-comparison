@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
 
     public DataManager dataManager;
 
+    private TeleportManager teleportManager;
+
 
     private XRIDefaultInputActions actions;
 
@@ -60,14 +62,14 @@ public class GameManager : MonoBehaviour
 
             GuiManager = FindObjectOfType<GUIManager>();
 
-
+            teleportManager = GetComponent<TeleportManager>();
 
 
             
+            StartNewSession();
         }
-
         InitializeGame();
-        StartNewSession();
+
     }
 
     private void Start()
@@ -157,7 +159,7 @@ public class GameManager : MonoBehaviour
         else
         {
             GameObject PlayerNonVR = Instantiate(PlayerNonVRPrefab);
-            PlayerNonVR.transform.position = PlayerSpawn.position;
+            PlayerNonVR.transform.position = PlayerSpawn.position+Vector3.up;
         }
 
     }
@@ -165,7 +167,7 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene(string scene)
     {
-        SceneManager.LoadScene(scene);
+        teleportManager.TeleportToScene(scene);
     }
 
 

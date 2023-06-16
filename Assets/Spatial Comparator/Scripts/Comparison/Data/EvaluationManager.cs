@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EvaluationManager : MonoBehaviour
 {
@@ -12,24 +13,16 @@ public class EvaluationManager : MonoBehaviour
 
     public int currentEvaluationIndex = 0;
 
-    public SubjectiveEvaluation evaluationData;
+    public SubjectiveEvaluationData evaluationData;
 
 
-    public List<string> SpatializerNames = new List<string> { "FMod Default Spatializer", "Oculus Spatializer", "Google Resonance Spatializer", "Steam Spatializer" };
-
-    public List<SubjectiveEvaluation> Evaluations;
 
     public SpatializerSwitcher spatializerSwitcher;
 
     private void Awake()
     {
-        Evaluations = new List<SubjectiveEvaluation> {
-            new SubjectiveEvaluation(1, SpatializerNames[0], 0, "How Realistic does the Spatialzer sound like?", "Realism", "Very Artificial", "Very Realistic"),
-            new SubjectiveEvaluation(2, SpatializerNames[1], 1, "How Realistic does the Spatialzer sound like?", "Realism", "Very Artificial", "Very Realistic"),
-            new SubjectiveEvaluation(3, SpatializerNames[2], 2, "How Realistic does the Spatialzer sound like?", "Realism", "Very Artificial", "Very Realistic"),
-            new SubjectiveEvaluation(4, SpatializerNames[3], 3, "How Realistic does the Spatialzer sound like?", "Realism", "Very Artificial", "Very Realistic"),
-            new SubjectiveEvaluation(5, SpatializerNames[0], 0, "Description Test 5", "Test Aspect", "Min", "Max")
-        };
+
+        toggle = GetComponent<ToggleGroup>();
     }
 
     private void OnEnable()
@@ -40,6 +33,42 @@ public class EvaluationManager : MonoBehaviour
     public void EnableAudioSource(bool enable)
     {
         spatializerSwitcher.gameObject.SetActive(enable);
+    }
+
+
+    public Loudspeaker Speaker1;
+    public Loudspeaker Speaker2;
+
+    ToggleGroup toggle;
+
+
+    
+
+    public void UpdateToggle(int i)
+    {
+
+        SwitchDirect(i*100);
+    }
+
+    public void StartSpeakers(int i)
+    {
+        Speaker1.SetActive(true);
+        Speaker1.SetSpatializer(6);
+        Speaker2.SetActive(true);
+        Speaker2.SetSpatializer(i);
+    }
+    public void StopSpeakers()
+    {
+        Speaker1.SetActive(false);
+        Speaker2.SetActive(false);
+    }
+
+    public void SwitchDirect(float vol)
+    {
+        AudioSource audioEvent1 = Speaker1.switcher.UnitySource.GetComponent<AudioSource>();
+        audioEvent1.volume = (1f - vol / 100f);
+        FMODUnity.StudioEventEmitter audioEvent2 = Speaker2.GetActiveEmitter();
+        audioEvent2.EventInstance.setVolume(vol / 100f);
     }
 
 
@@ -54,32 +83,35 @@ public class EvaluationManager : MonoBehaviour
         switch (i)
         {
             case 0:
-                EnableAudioSource(false);
+                //EnableAudioSource(false);
+                StopSpeakers();
                 break;
             case 1:
-                EnableAudioSource(true);
+                //EnableAudioSource(true);
+                StartSpeakers(evaluationData.evaluationParts[0].singleEvaluations[currentEvaluationIndex].baseSpatializerID - 1);
                 break;
             default:
-                EnableAudioSource(false);
+                //EnableAudioSource(false);
+                StopSpeakers();
                 break;
         }
-        spatializerSwitcher.SetSource(Evaluations[currentEvaluationIndex].spatializerID);
+        spatializerSwitcher.SetSource(evaluationData.);
     }
 
     public void SetupEvaluation()
     {
-        evaluationData = Evaluations[currentEvaluationIndex];
+        //evaluationData = Evaluations[currentEvaluationIndex];
         Dialog.SetHeader(evaluationData);
         EvaluationInterface.SetInterface(evaluationData);
         EvaluationInterface.SetEvaluationData(currentEvaluationIndex);
 
-        spatializerSwitcher.SetSource(Evaluations[currentEvaluationIndex].spatializerID);
+        //spatializerSwitcher.SetSource(Evaluations[currentEvaluationIndex].spatializerID);
     }
 
     public void SetNextEvaluation()
     {
         currentEvaluationIndex++;
-        evaluationData = Evaluations[currentEvaluationIndex];
+        //evaluationData = Evaluations[currentEvaluationIndex];
         Dialog.SetHeader(evaluationData);
         EvaluationInterface.SetInterface(evaluationData);
         EvaluationInterface.SetEvaluationData(currentEvaluationIndex);

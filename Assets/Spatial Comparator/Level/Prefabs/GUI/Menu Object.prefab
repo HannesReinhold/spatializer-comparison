@@ -630,6 +630,8 @@ MonoBehaviour:
   - {fileID: 3178651378546975394}
   - {fileID: 7710683439914736271}
   - {fileID: 854887999766877863}
+  Speaker1: {fileID: 0}
+  Speaker2: {fileID: 0}
 --- !u!1 &5313520465072267253
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,16 +939,14 @@ MonoBehaviour:
   evaluationData:
     id: 0
     spatializerName: 
+    spatializerID: 0
     description: 
     evaluationAspect: 
     minValue: 
     maxValue: 
-  SpatializerNames:
-  - FMod Default Spatializer
-  - Oculus Spatializer
-  - Google Resonance Spatializer
-  - Steam Spatializer
-  Evaluations: []
+  spatializerSwitcher: {fileID: 0}
+  Speaker1: {fileID: 0}
+  Speaker2: {fileID: 0}
 --- !u!1 &6786717778591525641
 GameObject:
   m_ObjectHideFlags: 0
@@ -1923,6 +1923,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6103802516873081643, guid: 905095575f5db0c43af80104becf44d1, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6223771442196113483, guid: 905095575f5db0c43af80104becf44d1, type: 3}
       propertyPath: m_Name
       value: Settings Menu
@@ -2651,6 +2655,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -75
       objectReference: {fileID: 0}
+    - target: {fileID: 2103821738251942457, guid: 2324932629e65d043a99b6fe1af2cb38, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2294603333627502937, guid: 2324932629e65d043a99b6fe1af2cb38, type: 3}
       propertyPath: m_Name
       value: Prefered Volume
@@ -3252,6 +3260,10 @@ PrefabInstance:
     - target: {fileID: 707002687444627929, guid: 9e85a95fa59b9ca4a992e908d4e30254, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -80.833336
+      objectReference: {fileID: 0}
+    - target: {fileID: 994437058434202714, guid: 9e85a95fa59b9ca4a992e908d4e30254, type: 3}
+      propertyPath: m_Camera
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1091740374239504186, guid: 9e85a95fa59b9ca4a992e908d4e30254, type: 3}
       propertyPath: m_Name
@@ -3983,6 +3995,10 @@ PrefabInstance:
     - target: {fileID: 1736833955495696710, guid: d61b00eda7789384e9e697cc22790c96, type: 3}
       propertyPath: m_Name
       value: Introduction
+      objectReference: {fileID: 0}
+    - target: {fileID: 1941102487987765798, guid: d61b00eda7789384e9e697cc22790c96, type: 3}
+      propertyPath: m_Camera
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 2230155253086752677, guid: d61b00eda7789384e9e697cc22790c96, type: 3}
       propertyPath: m_AnchorMax.y
@@ -5369,6 +5385,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 4735630018368719676, guid: 3eeb8593a23b07f44863c8f8b69854f9, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4850941136484716636, guid: 3eeb8593a23b07f44863c8f8b69854f9, type: 3}
       propertyPath: m_Name
       value: Tutorial Subjective 3
@@ -5799,6 +5819,10 @@ PrefabInstance:
     - target: {fileID: 7553646844612648633, guid: 9c3142d44631d664c8776c58d10ebd52, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7654332534136243673, guid: 9c3142d44631d664c8776c58d10ebd52, type: 3}
+      propertyPath: m_Camera
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8122465472399122438, guid: 9c3142d44631d664c8776c58d10ebd52, type: 3}
       propertyPath: m_RootOrder
@@ -6994,12 +7018,13 @@ MonoBehaviour:
   Min: {fileID: 4083459217906836783}
   Max: {fileID: 4880038121953200164}
   evaluationData:
-    evaluationID: 0
-    spatializerName: 
-    evaluationAspect: 
-    evaluationValue: 0
+    evaluationParts: []
   evaluationManager: {fileID: 5313520465254835678}
   slider: {fileID: 5622900035447283326}
+  toggleA: {fileID: 0}
+  toggleB: {fileID: 0}
+  sliderMin: {fileID: 0}
+  sliderMax: {fileID: 0}
 --- !u!1001 &5313520465212665155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7054,6 +7079,10 @@ PrefabInstance:
     - target: {fileID: 7553646844612648633, guid: 9c3142d44631d664c8776c58d10ebd52, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7654332534136243673, guid: 9c3142d44631d664c8776c58d10ebd52, type: 3}
+      propertyPath: m_Camera
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8122465472399122438, guid: 9c3142d44631d664c8776c58d10ebd52, type: 3}
       propertyPath: m_RootOrder
@@ -8508,6 +8537,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4304208934905883100, guid: 9d3931095d5d8204d8652f8005ce85ef, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4591608068910277727, guid: 9d3931095d5d8204d8652f8005ce85ef, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -8918,6 +8951,10 @@ PrefabInstance:
     - target: {fileID: 3579283119260144255, guid: 7f49b1a9a54ce4745ac7bc006ceb2437, type: 3}
       propertyPath: m_Name
       value: Tutorial Subjective 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694777030043666719, guid: 7f49b1a9a54ce4745ac7bc006ceb2437, type: 3}
+      propertyPath: m_Camera
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3982668802433270940, guid: 7f49b1a9a54ce4745ac7bc006ceb2437, type: 3}
       propertyPath: m_AnchorMax.y
@@ -9945,6 +9982,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7654332534136243673, guid: 9c3142d44631d664c8776c58d10ebd52, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7942822435181447258, guid: 9c3142d44631d664c8776c58d10ebd52, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -10343,6 +10384,10 @@ PrefabInstance:
     - target: {fileID: 2696573784430982418, guid: bbc84d79b1182664fa5dacff3a76efee, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3007337592823096926, guid: bbc84d79b1182664fa5dacff3a76efee, type: 3}
+      propertyPath: m_Camera
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3122791904009076030, guid: bbc84d79b1182664fa5dacff3a76efee, type: 3}
       propertyPath: m_Name
@@ -10943,6 +10988,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -75
       objectReference: {fileID: 0}
+    - target: {fileID: 4386108446208216331, guid: 047a18a9dac2c304a8df11490af6950a, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4482420073123796587, guid: 047a18a9dac2c304a8df11490af6950a, type: 3}
       propertyPath: m_Name
       value: Introduction Subjective
@@ -11289,6 +11338,10 @@ PrefabInstance:
     - target: {fileID: 5780632943592355450, guid: 78f540ca65f6917429c73f273e9cd168, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6069685742981381113, guid: 78f540ca65f6917429c73f273e9cd168, type: 3}
+      propertyPath: m_Camera
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6255935478984564889, guid: 78f540ca65f6917429c73f273e9cd168, type: 3}
       propertyPath: m_Name

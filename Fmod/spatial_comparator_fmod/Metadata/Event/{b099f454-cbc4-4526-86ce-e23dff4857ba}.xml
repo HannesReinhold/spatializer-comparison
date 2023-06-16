@@ -60,7 +60,7 @@
 	<object class="MarkerTrack" id="{46a9039a-7749-43b5-b5b9-1a603c7b2dec}" />
 	<object class="GroupTrack" id="{527aa06f-24d9-460b-8177-10411af4e2a8}">
 		<relationship name="modules">
-			<destination>{b1f4b4c0-1c0b-44b5-a433-c91d745b15d6}</destination>
+			<destination>{62a6f4ef-4f03-453c-b5df-58b5d972dda1}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{3cd36cc6-347a-4d6e-83f7-8da1380bbfe4}</destination>
@@ -68,13 +68,13 @@
 	</object>
 	<object class="Timeline" id="{9f5b6540-8fe7-4bb4-87b8-1bb8e14f935b}">
 		<relationship name="modules">
-			<destination>{b1f4b4c0-1c0b-44b5-a433-c91d745b15d6}</destination>
-		</relationship>
-		<relationship name="markers">
-			<destination>{7da72168-1b1f-4112-8163-0a333b5befef}</destination>
+			<destination>{62a6f4ef-4f03-453c-b5df-58b5d972dda1}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{bba2253d-b994-4d98-8b22-d9ce5ce388b3}">
+		<property name="volume">
+			<value>10</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{81937ee6-409e-4aeb-a924-ed6b0a06fc6b}</destination>
 		</relationship>
@@ -91,15 +91,21 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{3b006382-5027-48fe-8639-384cff0b4270}" />
-	<object class="SingleSound" id="{b1f4b4c0-1c0b-44b5-a433-c91d745b15d6}">
+	<object class="SingleSound" id="{62a6f4ef-4f03-453c-b5df-58b5d972dda1}">
 		<property name="length">
-			<value>582.5567346938775</value>
+			<value>312.9355102040825</value>
+		</property>
+		<property name="timelockedOffset">
+			<value>266.79999999999916</value>
 		</property>
 		<relationship name="audioFile">
-			<destination>{7006d8db-a2a4-4848-8cf7-8ecbf97b4ef7}</destination>
+			<destination>{63ba23f5-83e3-4a1f-ae4c-cc439a3a6ef3}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{3cd36cc6-347a-4d6e-83f7-8da1380bbfe4}">
+		<property name="volume">
+			<value>5.5</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -111,20 +117,6 @@
 		</relationship>
 		<relationship name="output">
 			<destination>{bba2253d-b994-4d98-8b22-d9ce5ce388b3}</destination>
-		</relationship>
-	</object>
-	<object class="LoopRegion" id="{7da72168-1b1f-4112-8163-0a333b5befef}">
-		<property name="position">
-			<value>121</value>
-		</property>
-		<property name="length">
-			<value>70</value>
-		</property>
-		<relationship name="timeline">
-			<destination>{9f5b6540-8fe7-4bb4-87b8-1bb8e14f935b}</destination>
-		</relationship>
-		<relationship name="markerTrack">
-			<destination>{46a9039a-7749-43b5-b5b9-1a603c7b2dec}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{81937ee6-409e-4aeb-a924-ed6b0a06fc6b}">
@@ -167,7 +159,6 @@
 		<property name="name">
 			<value>3D Attributes</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-2</value>
 		</property>
@@ -225,7 +216,6 @@
 		<property name="name">
 			<value>Overall Gain</value>
 		</property>
-		<property name="value" />
 		<property name="dataType">
 			<value>-1</value>
 		</property>
